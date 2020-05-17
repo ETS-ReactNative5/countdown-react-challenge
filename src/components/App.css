@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 400)));
+  margin: 0;
+}
+
+.App {
+  background-color: #1b1b2f;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.Info {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 2rem;
+  height: 5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.Countdown {
+  font-size: 9rem;
+  text-align: center;
+  color: #00a1ab;
+}
+
+.Countdown.danger {
+  color: #e43f5a;
+}
+
+.Form {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Label {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.Form span {
+  color: white;
+  font-size: 1rem;
+}
+
+.Form input {
+  width: 10rem;
+  padding: 0;
+  text-align: center;
+  background-color: #1f4068;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 2rem;
+}
+
+.Form button {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: solid 0.2rem #00a1ab;
+  color: #00a1ab;
+  margin: 0;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.Controls button {
+  font-size: 1.5rem;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: solid 0.2rem #00a1ab;
+  color: #00a1ab;
+}
+
+.Controls button.selected {
+  border: solid 0.2rem white;
+  color: white;
+}
+
+.Controls button.danger {
+  border: solid 0.2rem #e43f5a;
+  color: #e43f5a;
+}
+
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #e43f5a;
+  }
+  49% {
+    color: #e43f5a;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #e43f5a;
+  }
+}
